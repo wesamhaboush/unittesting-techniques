@@ -1,0 +1,5 @@
+#org.jbehave.core.embedder.StoryManager
+#Thu Nov 06 00:21:30 GMT 2014
+stories/account_initialization.story=0
+stories/account_operations.story=0
+total=0

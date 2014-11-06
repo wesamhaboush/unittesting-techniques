@@ -1,0 +1,22 @@
+<div class="story">
+<h1></h1>
+<div class="path">stories/account_initialization.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@simple </div>
+</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">As a</span> user</div>
+<div class="element asA"><span class="keyword asA">I want to</span> be able to initialize an account</div>
+<div class="element iWantTo"><span class="keyword iWantTo">So that</span> I can use that object</div>
+</div>
+<div class="scenario">
+<h2>Scenario: initialize an account with values succeeds</h2>
+<div class="step successful">Given a new account is created</div>
+<div class="step successful">Given account is for user <span class="step parameter">Rob</span></div>
+<div class="step successful">Given account has number <span class="step parameter">123</span></div>
+<div class="step successful">Given account initial balance is <span class="step parameter">100</span></div>
+<div class="step successful">When I initiate the account with those values</div>
+<div class="step successful">Then the account state should reflect those values</div>
+</div>
+</div>
