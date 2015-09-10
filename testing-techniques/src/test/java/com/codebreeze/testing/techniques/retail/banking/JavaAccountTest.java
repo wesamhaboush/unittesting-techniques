@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class JavaAccountTest {
     @Test
-    public void testAccountInitializationWorksOk(){
+    public void test_Account_Initialization_Works_Ok(){
         //given
         String name = "name1";
         String number = "number1";
@@ -22,7 +22,7 @@ public class JavaAccountTest {
     }
 
     @Test
-    public void testWithdrawalWorksOk(){
+    public void test_Withdraw_Happy_Path_Works(){
         //given
         double initialBalance = 100;
         double withdrawnAmount = 10;
@@ -37,7 +37,7 @@ public class JavaAccountTest {
     }
 
     @Test
-    public void testWithdrawalWorksOkAnotherExample(){
+    public void test_Withdraw_Happy_Path_Works_Another_Example(){
         //given
         double initialBalance = 30;
         double withdrawnAmount = 2;
@@ -52,7 +52,7 @@ public class JavaAccountTest {
     }
 
     @Test
-    public void testDepositsWorksOk(){
+    public void test_Deposit_Happy_Path_Works(){
         //given
         double initialBalance = 100;
         double withdrawnAmount = 10;
@@ -67,7 +67,7 @@ public class JavaAccountTest {
     }
 
     @Test
-    public void testDepositsWorksOkAnotherExample(){
+    public void test_Deposit_Works_Ok_Another_Example(){
         //given
         double initialBalance = 30;
         double withdrawnAmount = 2;
@@ -82,7 +82,7 @@ public class JavaAccountTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testWithdrawalOfTooMuchMoneyIsRejected(){
+    public void test_Withdrawing_Of_More_Than_The_Balance_Is_Rejected(){
         //given
         double initialBalance = 100;
         double withdrawnAmount = 101;
@@ -95,7 +95,7 @@ public class JavaAccountTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testWithdrawalOfTooMuchMoneyIsRejectedAnotherExample(){
+    public void test_Withdrawing_Of_More_Than_The_Balance_Is_Rejected_Another_Example(){
         //given
         double initialBalance = 30;
         double withdrawnAmount = 121;

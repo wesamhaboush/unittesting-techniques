@@ -4,9 +4,6 @@ import org.junit.Test
 
 import static groovy.test.GroovyAssert.shouldFail
 import static org.junit.Assert.assertEquals
-import static org.junit.Assert.assertEquals
-import static org.junit.Assert.assertThat
-
 
 class GroovyAccountTest {
     @Test
@@ -28,14 +25,12 @@ class GroovyAccountTest {
     @Test
     void "test withdraw happy path works"(){
         //given
-        def name = "name1"
-        def number = "number1"
         def initialBalance = 100
         def withdrawnAmount = 10
         def newBalance = initialBalance - withdrawnAmount
 
         //when
-        def account = new Account(name, number, initialBalance)
+        def account = new Account("name1", "number1", initialBalance)
         account.withdraw withdrawnAmount
 
         //then
@@ -45,14 +40,12 @@ class GroovyAccountTest {
     @Test
     void "test withdraw happy path works - another example"(){
         //given
-        def name = "name1"
-        def number = "number1"
         def initialBalance = 30
         def withdrawnAmount = 2
         def newBalance = initialBalance - withdrawnAmount
 
         //when
-        def account = new Account(name, number, initialBalance)
+        def account = new Account("name1", "number1", initialBalance)
         account.withdraw withdrawnAmount
 
         //then
@@ -62,14 +55,12 @@ class GroovyAccountTest {
     @Test
     void "test deposit happy path works"(){
         //given
-        def name = "name1"
-        def number = "number1"
         def initialBalance = 100
         def depositAmount = 10
         def newBalance = initialBalance + depositAmount
 
         //when
-        def account = new Account(name, number, initialBalance)
+        def account = new Account("name1", "number1", initialBalance)
         account.deposit depositAmount
 
         //then
@@ -79,14 +70,12 @@ class GroovyAccountTest {
     @Test
     void "test deposit happy path works another example"(){
         //given
-        def name = "name1"
-        def number = "number1"
         def initialBalance = 30
         def depositAmount = 2
         def newBalance = initialBalance + depositAmount
 
         //when
-        def account = new Account(name, number, initialBalance)
+        def account = new Account("name1", "number1", initialBalance)
         account.deposit depositAmount
 
         //then
@@ -96,13 +85,11 @@ class GroovyAccountTest {
     @Test
     void "test Withdrawing More Than Balance Is Rejected"(){
         //given
-        def name = "name1"
-        def number = "number1"
         def initialBalance = 100
         def withdrawnAmount = 101
 
         //when
-        def account = new Account(name, number, initialBalance)
+        def account = new Account("name1", "number1", initialBalance)
 
         //then
         shouldFail IllegalArgumentException, {account.withdraw withdrawnAmount}
@@ -111,13 +98,11 @@ class GroovyAccountTest {
     @Test
     void "test withdrawing more than balance is rejected - another example"(){
         //given
-        def name = "name1"
-        def number = "number1"
         def initialBalance = 30
         def withdrawnAmount = 121
 
         //when
-        def account = new Account(name, number, initialBalance)
+        def account = new Account("name1", "number1", initialBalance)
 
         //then
         shouldFail IllegalArgumentException, {account.withdraw withdrawnAmount}
