@@ -18,7 +18,7 @@ public class JavaAccountTest {
         //then
         assertEquals(name, account.getName());
         assertEquals(number, account.getNumber());
-        assertEquals(initialBalance, account.getBalance(), 00.1);
+        assertEquals(initialBalance, account.getBalance(), 0.1);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class JavaAccountTest {
         account.withdraw(withdrawnAmount);
 
         //then
-        assertEquals(newBalance, account.getBalance(), 00.1);
+        assertEquals(newBalance, account.getBalance(), 0.1);
     }
 
     @Test
@@ -48,7 +48,7 @@ public class JavaAccountTest {
         account.withdraw(withdrawnAmount);
 
         //then
-        assertEquals(newBalance, account.getBalance(), 00.1);
+        assertEquals(newBalance, account.getBalance(), 0.1);
     }
 
     @Test
@@ -63,7 +63,7 @@ public class JavaAccountTest {
         account.deposit(withdrawnAmount);
 
         //then
-        assertEquals(newBalance, account.getBalance(), 00.1);
+        assertEquals(newBalance, account.getBalance(), 0.1);
     }
 
     @Test
@@ -78,7 +78,7 @@ public class JavaAccountTest {
         account.deposit(withdrawnAmount);
 
         //then
-        assertEquals(newBalance, account.getBalance(), 00.1);
+        assertEquals(newBalance, account.getBalance(), 0.1);
     }
 
     @Test(expected = IllegalArgumentException.class)

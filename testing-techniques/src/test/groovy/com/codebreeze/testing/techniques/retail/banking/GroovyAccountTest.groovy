@@ -19,7 +19,7 @@ class GroovyAccountTest {
         //then
         assertEquals name, account.name
         assertEquals number, account.number
-        assertEquals initialBalance, account.balance, 00.1
+        assertEquals initialBalance, account.balance, 0.1
     }
 
     @Test
@@ -34,7 +34,7 @@ class GroovyAccountTest {
         account.withdraw withdrawnAmount
 
         //then
-        assertEquals newBalance, account.balance, 00.1
+        assertEquals newBalance, account.balance, 0.1
     }
 
     @Test
@@ -49,7 +49,7 @@ class GroovyAccountTest {
         account.withdraw withdrawnAmount
 
         //then
-        assertEquals newBalance, account.balance, 00.1
+        assertEquals newBalance, account.balance, 0.1
     }
 
     @Test
@@ -64,7 +64,7 @@ class GroovyAccountTest {
         account.deposit depositAmount
 
         //then
-        assertEquals newBalance, account.balance, 00.1
+        assertEquals newBalance, account.balance, 0.1
     }
 
     @Test
@@ -79,7 +79,7 @@ class GroovyAccountTest {
         account.deposit depositAmount
 
         //then
-        assertEquals newBalance, account.balance, 00.1
+        assertEquals newBalance, account.balance, 0.1
     }
 
     @Test
