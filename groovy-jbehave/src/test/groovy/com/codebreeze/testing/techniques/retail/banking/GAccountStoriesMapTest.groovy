@@ -38,29 +38,3 @@ class GAccountStoriesMapTest extends JUnitStoryMaps {
         ["+author *", "theme *","-skip", '@simple', '@financial']
     }
 }
-
-//public class TraderStoryMaps extends JUnitStoryMaps {
-//
-//    public TraderStoryMaps() {
-//        configuredEmbedder().useMetaFilters(metaFilters());
-//    }
-//
-//    @Override
-//    public Configuration configuration() {
-//        return new MostUsefulConfiguration()
-//                .useStoryReporterBuilder(new StoryReporterBuilder()
-//                .withCodeLocation(CodeLocations.codeLocationFromClass(this.getClass())));
-//    }
-//
-//    @Override
-//    protected List<String> metaFilters() {
-//        return asList("+author *", "theme *","-skip");
-//    }
-//
-//    @Override
-//    protected List<String> storyPaths() {
-//        return new StoryFinder().findPaths(codeLocationFromClass(this.getClass()), "**/*.story", "");
-//
-//    }
-//
-//}

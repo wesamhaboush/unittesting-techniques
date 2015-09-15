@@ -14,9 +14,9 @@ class SpockAccountTest extends Specification {
             def account = new Account(name, number, initialBalance)
 
         then:
-            account.getName() == name
-            account.getNumber() == number
-            account.getBalance() == initialBalance
+            account.name == name
+            account.number == number
+            account.balance == initialBalance
     }
 
     def "test i can withdraw successfully from my account"() {
