@@ -2,16 +2,20 @@ package com.codebreeze.testing.techniques.retail.banking
 
 import spock.lang.Specification
 
+import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic
+import static org.apache.commons.lang3.RandomStringUtils.randomNumeric
+import static org.apache.commons.lang3.RandomUtils.nextDouble
+
 class SpockAccountTest extends Specification {
 
     def "account gets initialized correctly"() {
         given:
-            def name = "name1"
-            def number = "number1"
-            def initialBalance = 100
+            def name = randomAlphabetic 15
+            def number = randomNumeric 16
+            def initialBalance = nextDouble 1, 100000
 
         when:
-            def account = new Account(name, number, initialBalance)
+            def account = Account.newInstance name, number, initialBalance
 
         then:
             account.name == name
@@ -21,7 +25,9 @@ class SpockAccountTest extends Specification {
 
     def "test i can withdraw successfully from my account"() {
         when:
-            def account = new Account("name", "number", initialBalance)
+            def name = randomAlphabetic 15
+            def number = randomNumeric 16
+            def account = Account.newInstance name, number, initialBalance
             account.withdraw withdrawnAmount
 
         then:
@@ -35,7 +41,9 @@ class SpockAccountTest extends Specification {
 
     def "test i can deposit successfully into my account"() {
         when:
-            def account = new Account("name", "number", initialBalance)
+            def name = randomAlphabetic 15
+            def number = randomNumeric 16
+            def account = Account.newInstance name, number, initialBalance
             account.deposit depositAmount
 
         then:
@@ -49,7 +57,9 @@ class SpockAccountTest extends Specification {
 
     def "test i can not withdraw too much money"() {
         when:
-            def account = new Account("name", "number", initialBalance)
+            def name = randomAlphabetic 15
+            def number = randomNumeric 16
+            def account = Account.newInstance name, number, initialBalance
             account.withdraw withdrawnAmount
 
         then:
